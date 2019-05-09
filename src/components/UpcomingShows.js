@@ -21,6 +21,10 @@ const StyledShow = styled.li`
 
     p {
       flex: 1 0 25%;
+
+      &:first-child {
+        flex: 1 0 15%;
+      }
     }
   }
 `;
@@ -61,7 +65,7 @@ const UpcomingShows = () => (
     <H2withPadding>Upcoming Shows</H2withPadding>
     <ul>
       {upcomingShows.map(show => (
-        <Show show={show} />
+        <Show show={show} key={show.date} />
       ))}
     </ul>
   </section>

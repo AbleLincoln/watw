@@ -11,6 +11,8 @@ const StyledContact = styled.div`
   position: relative;
   padding: 2em;
   text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
 
   > * {
     position: relative;
@@ -51,7 +53,10 @@ const Contact = () => (
       </P>
       <P mb="0">
         <FontAwesomeIcon icon={faEnvelope} />
-        music<Colored color={palette.gold}>@</Colored>WymanAndTheWolves.com
+        music<Colored color={palette.gold}>@</Colored>
+        Wyman
+        <wbr />
+        AndTheWolves.com
       </P>
     </StyledContact>
   </ContentSection>

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
+import breakpoints from '../utils/breakpoints';
 import logo from '../assets/logo.png';
 
 const StyledHeader = styled.header`
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 30px;
+  right: 30px;
   top: 2rem;
 `;
 
@@ -28,6 +29,10 @@ const NavItem = styled.li`
 
   ::first-letter {
     font-size: 125%;
+  }
+
+  @media screen and (max-width: ${breakpoints.mobile}) {
+    display: none;
   }
 `;
 

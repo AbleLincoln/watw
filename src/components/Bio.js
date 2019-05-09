@@ -3,16 +3,25 @@ import styled from 'styled-components';
 import Img from './Img';
 import ContentSection from './ContentSection';
 import { H2, P, Bold, Colored } from '../utils/typography';
+import breakpoints from '../utils/breakpoints';
 import palette from '../utils/palette';
 import bio from '../assets/bio.png';
 
 const StyledBio = styled(ContentSection)`
   > *:first-child {
     flex: 0 0 calc(50% - 30px);
+
+    @media screen and (max-width: ${breakpoints.mobile}) {
+      display: none;
+    }
   }
 
   > *:last-child {
     flex: 0 0 calc(50% - 60px);
+
+    @media screen and (max-width: ${breakpoints.mobile}) {
+      flex: 1 0 calc(100% - 60px);
+    }
   }
 `;
 

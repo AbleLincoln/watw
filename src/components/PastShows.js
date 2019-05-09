@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ContentSection from './ContentSection';
 import Img from './Img';
-import { H2, P, Light } from '../utils/typography';
+import { H2 } from '../utils/typography';
 import { pastShows } from '../utils/data';
+import breakpoints from '../utils/breakpoints';
 
 const StyledShow = styled.li`
   /* flex: 0 1 400px; */
@@ -31,7 +32,11 @@ const Show = ({ show }) => (
       {show.venue}
       <span>{show.date}</span>
     </p>
-    <Img src={show.poster} width="auto" height="400px" />
+    <Img
+      src={show.poster}
+      width="auto"
+      height={window.innerWidth > breakpoints.mobileNum ? '400px' : 'auto'}
+    />
   </StyledShow>
 );
 
@@ -54,7 +59,7 @@ const PastShows = () => (
     <H2>Past Shows</H2>
     <ShowList>
       {pastShows.map(show => (
-        <Show show={show} />
+        <Show show={show} key={show.date} />
       ))}
     </ShowList>
   </ContentSection>

@@ -6,6 +6,7 @@ const Img = ({ src, alt, width, height }) => (
     style={{
       width: width || '100%',
       height: height || 'auto',
+      maxWidth: '100%',
       boxShadow: '0px 2px 4px 1px rgba(0,0,0,0.25)',
     }}
     src={src}
