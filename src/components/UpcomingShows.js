@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { H2, Light, Link } from '../utils/typography';
+import styled, { css } from 'styled-components';
+import { H2, P, Light, Link } from '../utils/typography';
+import Breakpoints from '../utils/breakpoints';
 import { upcomingShows } from '../utils/data';
 
 const StyledShow = styled.li`
   background-color: rgba(24, 24, 24, 0.35);
-  padding: 1.5em 30px;
+  padding: 1em 30px;
+
+  @media screen and (max-width: ${Breakpoints.mobile}) {
+    padding: 1em 20px;
+  }
 
   &:nth-child(2n) {
     background-color: rgba(104, 104, 104, 0.25);
@@ -18,28 +23,47 @@ const StyledShow = styled.li`
     margin: auto;
     display: flex;
     justify-content: space-between;
-
-    p {
-      flex: 1 0 25%;
-
-      &:first-child {
-        flex: 1 0 15%;
-      }
-    }
+    flex-wrap: wrap;
   }
+`;
+
+const showInfoStyles = css`
+  margin-bottom: 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  @media screen and (max-width: ${Breakpoints.mobile}) {
+    text-align: center;
+    flex: 1 0 100%;
+  }
+`;
+const Date = styled(Light)`
+  ${showInfoStyles}
+`;
+const Venue = styled(P)`
+  ${showInfoStyles}
+  flex: 1 0 25%;
+  margin-bottom: 0;
+`;
+const Location = styled(Light)`
+  ${showInfoStyles}
+  flex: 1 0 25%;
+`;
+const LinkWrapper = styled.p`
+  ${showInfoStyles}
+  flex: 1 0 25%;
 `;
 
 const Show = ({ show }) => (
   <StyledShow>
     <div className="wrapper">
-      <Light mb="0">{show.date}</Light>
-      <p>{show.venue}</p>
-      <Light mb="0">{show.location}</Light>
-      <p>
+      <Date>{show.date}</Date>
+      <Venue>{show.venue}</Venue>
+      <Location>{show.location}</Location>
+      <LinkWrapper>
         <Link href={show.link} target="_blank">
           Tickets
         </Link>
-      </p>
+      </LinkWrapper>
     </div>
   </StyledShow>
 );
@@ -58,6 +82,9 @@ const H2withPadding = styled(H2)`
   margin: auto;
   margin-bottom: 1em;
   padding: 0 30px;
+  @media screen and (max-width: ${Breakpoints.mobile}) {
+    padding: 0 20px;
+  }
 `;
 
 const UpcomingShows = () => (

@@ -9,6 +9,11 @@ const StyledHeader = styled.header`
   left: 30px;
   right: 30px;
   top: 2rem;
+  @media screen and (max-width: ${breakpoints.mobile}) {
+    top: 0em;
+    left: 20px;
+    right: 20px;
+  }
 `;
 
 const NavList = styled.ul`
@@ -42,6 +47,9 @@ const Logo = styled.li`
   img {
     max-width: 150px;
     box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.5);
+    @media screen and (max-width: ${breakpoints.mobile}) {
+      max-width: 25vw;
+    }
   }
 `;
 
