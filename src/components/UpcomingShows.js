@@ -31,6 +31,7 @@ const showInfoStyles = css`
   margin-bottom: 0;
   padding: 0.5em;
   box-sizing: border-box;
+  flex: 1 0 25%;
   @media screen and (max-width: ${Breakpoints.mobile}) {
     text-align: center;
     flex: 1 0 100%;
@@ -38,19 +39,17 @@ const showInfoStyles = css`
 `;
 const Date = styled(Light)`
   ${showInfoStyles}
+  flex: 1 0 15%;
 `;
 const Venue = styled(P)`
   ${showInfoStyles}
-  flex: 1 0 25%;
   margin-bottom: 0;
 `;
 const Location = styled(Light)`
   ${showInfoStyles}
-  flex: 1 0 25%;
 `;
 const LinkWrapper = styled.p`
   ${showInfoStyles}
-  flex: 1 0 25%;
 `;
 
 const Show = ({ show }) => (
