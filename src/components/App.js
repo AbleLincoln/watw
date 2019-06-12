@@ -23,13 +23,14 @@ function App() {
       <Header />
       <Hero />
       <Bio />
-      <Element name="video-section">
-        <Video />
-      </Element>
       <Element name="show-section">
         <UpcomingShows />
         <PastShows />
       </Element>
+      <Element name="video-section">
+        <Video />
+      </Element>
+
       <Element name="contact-section">
         <Contact />
       </Element>

@@ -58,11 +58,15 @@ const Show = ({ show }) => (
       <Date>{show.date}</Date>
       <Venue>{show.venue}</Venue>
       <Location>{show.location}</Location>
-      <LinkWrapper>
-        <Link href={show.link} target="_blank">
-          Tickets
-        </Link>
-      </LinkWrapper>
+      {show.link ? (
+        <LinkWrapper>
+          <Link href={show.link} target="_blank">
+            Tickets
+          </Link>
+        </LinkWrapper>
+      ) : (
+        ''
+      )}
     </div>
   </StyledShow>
 );

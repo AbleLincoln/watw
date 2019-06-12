@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from './Img';
 import ContentSection from './ContentSection';
-import { H2, P, Bold, Colored } from '../utils/typography';
+import { H2, P, Bold, Italic, Colored } from '../utils/typography';
 import breakpoints from '../utils/breakpoints';
 import palette from '../utils/palette';
 import bio from '../assets/bio.png';
+import fullband from '../assets/fullband.jpg';
 
 const StyledBio = styled(ContentSection)`
   > *:first-child {
@@ -46,36 +47,50 @@ const TextSection = styled.section`
 `;
 
 const Bio = () => (
-  <StyledBio>
-    <section>
-      <Img src={bio} alt="A ripper violin player and a shredding bass player" />
-    </section>
-    <TextSection>
-      <div className="background" />
-      <H2>
-        Hailing from the <Colored color={palette.gold}>City of Angels</Colored>
-      </H2>
-      <P>
-        Wyman and the Wolves roll in like a quiet storm with a sound and energy
-        that is truly their own. The members' collective influences vary across
-        a broad spectrum, yet converge and unite into what the band describes as{' '}
-        <Bold>Cosmic Country Soul</Bold>.
-      </P>
-      <P>
-        Whether a dark gypsy-esque rambling country tune, a soulful smouldering
-        groove laden number, or a dreamy emotion filled piece, these dudes make
-        it pure and play with a firey intensity! Each tune it's own entity, the
-        group focuses on songwriting, lyrical content, exploration and variety.
-      </P>
-      <P>
-        Having formed in early January of 2019, Wyman and the Wolves are just
-        beginning their musical journey together. That being said, it only took
-        a few short moments in a cozy rehearsal space in Burbank, CA to know
-        that something magical was on the bound! Fanning the spark that is sure
-        to become a wildfire, the fellas of WW are comin' in hot!
-      </P>
-    </TextSection>
-  </StyledBio>
+  <>
+    <StyledBio>
+      <section>
+        <Img
+          src={bio}
+          alt="A ripper violin player and a shredding bass player"
+        />
+      </section>
+      <TextSection>
+        <div className="background" />
+        <H2>
+          Hailing from the{' '}
+          <Colored color={palette.gold}>City of Angels</Colored>
+        </H2>
+        <P>
+          Wyman &amp; The Wolves roll in like a storm with a sound and energy
+          that is truly their own. The member’s collective influences vary
+          across a broad spectrum, yet converge and unite into what the band
+          describes as <Bold>Cosmic Country Soul</Bold>. Whether a dark
+          gypsy-esque rambling country tune, an emotional groove laden number,
+          or an all out rocker, these dudes make it pure and play with a fiery
+          intensity!
+        </P>
+        <P>
+          Having formed in early January of 2019, Wyman &amp; The Wolves are
+          just beginning their musical journey together. That being said, it
+          only took a few short moments in a cozy rehearsal space in Burbank, CA
+          to know something magical was on the bound.
+        </P>
+        <P>
+          Wasting little time, the fellas recently found themselves recording
+          their debut EP at Robby Krieger’s (<Italic>The Doors</Italic>) Horse
+          Latitudes Studio with Eric Corne behind the boards. Tracked live, the
+          recordings capture the raw essence of a group finding their true flow
+          and the spark that is sure to become a{' '}
+          <Colored color={palette.red}>wildfire</Colored>!
+        </P>
+      </TextSection>
+    </StyledBio>
+
+    <ContentSection>
+      <Img src={fullband} />
+    </ContentSection>
+  </>
 );
 
 export default Bio;

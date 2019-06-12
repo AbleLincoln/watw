@@ -27,6 +27,10 @@ export const Bold = styled.strong`
   font-weight: 600;
 `;
 
+export const Italic = styled.i`
+  font-style: italic;
+`;
+
 export const Colored = styled.span`
   color: ${props => props.color || '#fff'};
 `;
