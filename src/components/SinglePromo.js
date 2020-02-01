@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import breakpoints from '../utils/breakpoints';
 import thedoor from '../assets/thedoor.jpg';
 import logo from '../assets/whitelogo.png';
-import Phosphate from '../assets/Phosphate/Phosphate-Solid.otf';
+import { PhosphateFont } from '../utils/typography';
 
 const Div = styled.div`
   display: grid;
@@ -41,13 +41,6 @@ const glow = keyframes`
 `
 
 const H1 = styled.h1`
-  @font-face {
-    font-family: 'Phosphate';
-    src: url(${Phosphate}) format('otf');
-    font-weight: 400;
-    font-style: normal;
-  }
-
   font: 72px Phosphate;
 
   animation: ${glow} 2s linear infinite alternate;
@@ -79,6 +72,7 @@ const Logo = styled.div`
 
 const SinglePromo = () => (
   <Div>
+    <PhosphateFont />
     <Title>
       <H2>new single</H2>
       <H1>The Door</H1>

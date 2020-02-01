@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import palette from './palette'
+import Phosphate from '../assets/Phosphate/Phosphate-Solid.otf'
 
 export const AppTypography = `
   font-size: 18px;
@@ -44,3 +45,12 @@ export const Link = styled.a`
     color: ${palette.gold};
   }
 `
+
+export const PhosphateFont = createGlobalStyle`
+  @font-face {
+    font-family: 'Phosphate';
+    src: url(${Phosphate}) format('otf');
+    font-weight: 400;
+    font-style: normal;
+  }
+`;
