@@ -48,9 +48,7 @@ export const Link = styled.a`
 
 export const PhosphateFont = createGlobalStyle`
   @font-face {
-    font-family: 'Phosphate';
-    src: url(${Phosphate}) format('otf');
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Phosphate Pro';
+    src: url(${Phosphate}) format('opentype');
   }
 `;

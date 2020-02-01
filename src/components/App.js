@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 // import { Element } from 'react-scroll'
-import { AppTypography } from '../utils/typography'
+import { AppTypography, PhosphateFont } from '../utils/typography'
 // import Header from './Header'
 // import Hero from './Hero'
 // import Bio from './Bio'
@@ -21,6 +21,7 @@ const StyledApp = styled.div`
 function App() {
   return (
     <StyledApp>
+      <PhosphateFont />
       <SinglePromo />
       {/* <Header />
       <Hero />
