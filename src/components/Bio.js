@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import Img from './Img';
-import ContentSection from './ContentSection';
-import { H2, P, Bold, Italic, Colored } from '../utils/typography';
-import breakpoints from '../utils/breakpoints';
-import palette from '../utils/palette';
-import bio from '../assets/bio.png';
-import fullband from '../assets/fullband.jpg';
+import React from 'react'
+import styled from 'styled-components'
+import Img from './Img'
+import ContentSection from './ContentSection'
+import { H2, P, Bold, Italic, Colored } from '../utils/typography'
+import breakpoints from '../utils/breakpoints'
+import palette from '../utils/palette'
+import bio from '../assets/bio.png'
+import fullband from '../assets/fullband.jpg'
 
 const StyledBio = styled(ContentSection)`
   > *:first-child {
@@ -24,7 +24,7 @@ const StyledBio = styled(ContentSection)`
       flex: 1 0 calc(100% - 60px);
     }
   }
-`;
+`
 
 const TextSection = styled.section`
   position: relative;
@@ -44,10 +44,10 @@ const TextSection = styled.section`
   p {
     text-align: justify;
   }
-`;
+`
 
 const Bio = () => (
-  <>
+  <React.Fragment>
     <StyledBio>
       <section>
         <Img
@@ -86,11 +86,10 @@ const Bio = () => (
         </P>
       </TextSection>
     </StyledBio>
-
     <ContentSection>
       <Img src={fullband} />
     </ContentSection>
-  </>
-);
+  </React.Fragment>
+)
 
-export default Bio;
+export default Bio
