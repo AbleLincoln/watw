@@ -50,11 +50,11 @@ const H2 = styled.h2`
   font-size: 28px;
 `;
 
-const H3 = styled.h3`
+const P = styled.p`
+  margin-top: 1rem;
   font-weight: 200;
-  font-size: 24px;
-  letter-spacing: 15px;
-`;
+
+`
 
 const Logo = styled.div`
   position: absolute;
@@ -74,7 +74,7 @@ const SinglePromo = () => (
     <Title>
       <H2>new single</H2>
       <H1>The Door</H1>
-      <H3>coming soon</H3>
+      <P><a href="https://open.spotify.com/album/669CzH3Pt67hi4usE0ANz9" target="_blank">spotify</a> • <a href="https://music.apple.com/us/album/the-door-single/1496342848?app=music&ign-mpt=uo%3D4" target="_blank">apple music</a> • <a href="https://www.youtube.com/watch?v=3NCawhFimW4" target="_blank">youtube</a></P>
     </Title>
 
     <Logo>
